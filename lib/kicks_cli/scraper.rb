@@ -1,5 +1,13 @@
-class Scraper 
+class StockXSneakers::Scraper 
 
-  def get_page 
+  # attr_accessor :parse_page
+
+  # def initialize 
+  #   doc = (open(https://stockx.com/adidas))
+  #   @parse_page ||= Nokogiri::HTML(doc)
+  # end 
+  
+  # names = parse_page.css("")
     
+    puts "hi"
 end 
