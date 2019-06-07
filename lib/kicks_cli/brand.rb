@@ -1,12 +1,19 @@
-class StockXSneakers::Brand 
+class Brand 
   
-  attr_accessor :name
+  attr_accessor :name :sneakers
   
   @@all = []
   
   def initialize(name)
     @name = name 
-    @@all << self 
+    @sneakers = []
+  end 
+  
+  def sneakers
+    @sneakers 
+  end 
+  
+  def add_sneakers
   end 
   
   def shoes 
