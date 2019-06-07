@@ -1,4 +1,4 @@
-module StockX
+module StockXSneakers
 end 
 
 require_relative '../config/environment'
