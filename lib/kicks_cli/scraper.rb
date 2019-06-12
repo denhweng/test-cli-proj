@@ -2,21 +2,21 @@ require 'nokogiri'
 require 'open-uri'
 require 'pry'
 
-class Scraper 
+ class Scraper 
   
-  @@all = []
+ #  @@all = []
   # attr_accessor :parse_page
 
   # def initialize 
   #end 
   
   
-   def self.scrape_shoes_by_brand(input)
+    def self.scrape_shoes_by_brand
      doc = Nokogiri::HTML(open('https://stockx.com/balenciaga-sneakers')) # change to input after testing 
      doc.css('div.TileBody-sc-1rlrno1-0').collect do |sneaker|
       arr = sneaker.css('div').text.split("lowest ask")
       arr.uniq 
-      @@all << arr.uniq
+    #  @@all << arr.uniq
      end 
      # browse_tiles = doc.css(".browse-tile")
      # browse_tiles.each do |tile| 
@@ -25,7 +25,7 @@ class Scraper
      binding.pry
      #this method should eventually create shoe instances
      #make sure you're associating each instance with a brand
-   end
+    end
 
   
   # def item_container
@@ -40,4 +40,4 @@ class Scraper
   # end 
     
   
-end 
+ end 
