@@ -13,8 +13,10 @@ class CLI
   end 
   
   def welcome 
-    puts "Welcome to IMDB!"
-    puts "Let's see the top movies and their box office success so far."
+    puts "|---------------------------------------------------------------|"
+    puts "|                     Welcome to IMDB!                          |"
+    puts "| Let's see the top movies and their box office success so far. |"
+    puts "|---------------------------------------------------------------|"
   end 
 
   def show_movies 
