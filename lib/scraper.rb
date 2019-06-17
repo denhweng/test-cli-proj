@@ -19,6 +19,7 @@ class Scraper
   def self.scrape_movie_details(selected_movie)
     html = open("https://www.imdb.com/" + selected_movie.url)
     doc = Nokogiri::HTML(html)
+    selected_movie.release_date = doc.css(".subtext").text.split("\n")[10].strip
     selected_movie.audience = doc.css(".subtext").text.split("\n")[1].strip
     selected_movie.rating = doc.css(".ratingValue").text.strip
     selected_movie.runtime = doc.css(".subtext").text.split("\n")[3].strip
