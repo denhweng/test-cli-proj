@@ -8,6 +8,7 @@ class CLI
     puts "Welcome to IMDB!"
     puts "Let's see the top movies and their box office success so far."
     Scraper.scrape_movies
+    sleep 1 
     show_movies
     select_movie
   end 
@@ -25,20 +26,26 @@ class CLI
     selected_movie = Movie.all[input.to_i - 1]
     
     if !selected_movie
-      puts "Not a valid selection."
+      puts "Not a valid selection. If you are done, type 'exit'. Otherwise:"
       select_movie
-    else
+    elsif input == "exit"
+      goodbye
+    else 
       Scraper.scrape_movie_details(selected_movie)
-      puts "Awesome. Here are all the details for that #{selected_movie.title}."
+      puts "Here are all the details for #{selected_movie.title}."
       puts "-- Release Date: #{selected_movie.release_date}"
       puts "-- Audience: #{selected_movie.audience}" 
       puts "-- Rating: #{selected_movie.rating}"
       puts "-- Runtime: #{selected_movie.runtime}"
       puts "-- Summary: #{selected_movie.summary}"
-      select_movie 
-      
-    end 
-    
+      sleep 2
+      puts "If you are done, please type 'exit'. Otherwise:"
+      select_movie
+    end
+  end 
+   
+  def goodbye  
+    puts "Thank you for using IMDB CLI! Happy watching!"
   end 
   
 end
