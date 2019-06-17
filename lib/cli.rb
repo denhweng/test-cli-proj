@@ -29,7 +29,8 @@ class CLI
       select_movie
     else
       Scraper.scrape_movie_details(selected_movie)
-      puts "Awesome. Here are all the details for that movie."
+      puts "Awesome. Here are all the details for that #{selected_movie.title}."
+      puts "-- Audience: #{selected_movie.audience}"
       puts "-- Rating: #{selected_movie.rating}"
       puts "-- Runtime: #{selected_movie.runtime}"
       puts "-- Summary: #{selected_movie.summary}"
