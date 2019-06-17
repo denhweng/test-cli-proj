@@ -1,6 +1,6 @@
 class Movie 
   
-  attr_accessor :title, :url
+  attr_accessor :title, :url, :rating, :runtime, :summary 
   
   @@all = []
   
