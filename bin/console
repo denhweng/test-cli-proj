@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "./config/environment"
-require "./lib/movie_cli/cli"
+require_relative "../lib/movie"
+require_relative "../lib/cli"
+require_relative "../lib/scraper"
 
 
 # You can add fixtures and/or initialization code here to make experimenting
