@@ -1,18 +1,22 @@
 class CLI
   
   def call
-    welcome 
+    start 
   end 
   
-  def welcome
-    puts "Welcome to IMDB!"
-    puts "Let's see the top movies and their box office success so far."
+  def start
+    welcome
     Scraper.scrape_movies
     sleep 1 
     show_movies
     select_movie
   end 
   
+  def welcome 
+    puts "Welcome to IMDB!"
+    puts "Let's see the top movies and their box office success so far."
+  end 
+
   def show_movies 
     Movie.all.each.with_index(1) do |movie, i|
      puts "#{i}. #{movie.title}"
