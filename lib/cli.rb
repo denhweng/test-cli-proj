@@ -2,14 +2,14 @@ class CLI
   
   def call
     welcome 
-    # start
   end 
   
   def welcome
     puts "Welcome to IMDB!"
-    puts "Let's see the top movies and how they're doing at the box office so far."
+    puts "Let's see the top movies and their box office success so far."
     Scraper.scrape_movies
     show_movies
+    select_movie
   end 
   
   def show_movies 
@@ -18,5 +18,21 @@ class CLI
     end 
   end
   
+  def select_movie
+    puts "Please select a movie to see more about it."
+    input = gets.chomp 
+    
+    selected_movie = Movie.all[input.to_i - 1]
+    
+    if !selected_movie
+      puts "Not a valid selection."
+      select_movie
+    else
+      Scraper.scrape_movie_details(selected_movie)
+      
+      
+    end 
+    
+  end 
   
 end

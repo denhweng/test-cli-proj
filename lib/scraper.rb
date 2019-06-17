@@ -10,9 +10,13 @@ class Scraper
   doc = Nokogiri::HTML(html)
   doc.css(".rhs-body")[1].css(".rhs-row").each do |mov|
     title = mov.css(".title").text.strip
-    Movie.new(title)
+    url = mov.css(".title a").attribute("href").value
+    Movie.new(title, url)
     
   end 
+  end 
+  
+  def self.scrape_movie_details
   end 
   
 end 
