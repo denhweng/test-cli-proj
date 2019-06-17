@@ -3,12 +3,12 @@ class CLI
   def call
     # Scraper.scrape_shoes_by_brand #scrapes the shoes before welcome is puts'd in the console 
     welcome 
-    sleep 2
-    start
+    # start
   end 
   
   def welcome
-    puts "Welcome to StockX, the biggest market for rare shoes. Let's see if the shoes you are looking for are available."
+    puts "Welcome to IMDB!"
+    puts "Let's see what movies are playing now."
   end 
   
   def start 

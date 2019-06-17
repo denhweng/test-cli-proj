@@ -1,3 +1,3 @@
-module StockXSneakers
+module IMDBMovies
   VERSION = "0.1.0"
 end 
