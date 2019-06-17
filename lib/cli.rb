@@ -39,13 +39,14 @@ class CLI
       puts "-- Runtime: #{selected_movie.runtime}"
       puts "-- Summary: #{selected_movie.summary}"
       sleep 2
+      puts "-----------------------------"
       puts "If you are done, please type 'exit'. Otherwise:"
       select_movie
     end
   end 
    
   def goodbye  
-    puts "Thank you for using IMDB CLI! Happy watching!"
+    puts "Thank you for using IMDB CLI! :) Happy watching!"
   end 
   
 end

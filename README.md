@@ -1,10 +1,7 @@
-HELLO WORLD
 
-# Test::Cli::Proj
+# IMDB CLI
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/test/cli/proj`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the IMDB CLI Gem! This gem allows users to see the 5 top-grossing movies playing in theatres right now. Choices by the user will show corresponding movies, and in-depth details like release date, audience, rating, runtime, and summary. Look no further than this gem, to find what blockbuster to watch next. 
 
 ## Installation
 
@@ -24,7 +21,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run the IMDB CLI by typing "ruby bin/console" into the terminal. Follow the intructions in the terminal - choose a movie by its corresponding number to see more details about it. Keep choosing corresponding numbers, or if you're done, type "exit" into the terminal to quit the CLI.
 
 ## Development
 

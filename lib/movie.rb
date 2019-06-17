@@ -13,6 +13,5 @@ class Movie
   def self.all 
     @@all 
   end 
-    
   
 end 
